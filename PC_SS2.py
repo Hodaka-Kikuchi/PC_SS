@@ -1,3 +1,5 @@
+# 全ての画面のSSを取得
+
 import mss
 import os
 import time

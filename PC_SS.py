@@ -1,3 +1,5 @@
+# おおもとの画面のSSのみ取得
+
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import pyautogui
