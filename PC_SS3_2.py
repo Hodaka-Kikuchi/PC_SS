@@ -115,9 +115,12 @@ class ScreenshotApp:
     def screenshot_loop(self, interval):
         try:
             while self.running:
-                timestamp = time.strftime("%Y%m%d_%H%M%S")
-                output_path_1 = os.path.join(self.save_folder.get(), f"screenshot_1_{timestamp}.bmp")
-                output_path_2 = os.path.join(self.save_folder.get(), f"screenshot_2_{timestamp}.bmp")
+                #timestamp = time.strftime("%Y%m%d_%H%M%S")
+                #output_path_1 = os.path.join(self.save_folder.get(), f"screenshot_1_{timestamp}.bmp")
+                #output_path_2 = os.path.join(self.save_folder.get(), f"screenshot_2_{timestamp}.bmp")
+                
+                output_path_1 = os.path.join(self.save_folder.get(), f"screenshot_1.bmp")
+                output_path_2 = os.path.join(self.save_folder.get(), f"screenshot_2.bmp")
 
                 # 2つのアプリケーションのスクリーンショットを同時に取得
                 if not self.capture_window(self.selected_window_title_1.get(), output_path_1) or \
@@ -169,3 +172,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = ScreenshotApp(root)
     root.mainloop()
+
